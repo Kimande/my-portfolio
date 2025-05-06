@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="product-page">  <!-- Wrapper for scoping styles -->
+        
+        <!-- Header Section -->
+        <header class="product-nav">
+            <nav>
+                <a href="#">Categories</a>
+                <a href="#">Product Lists</a>
+            </nav>
+            <input type="search" placeholder="Search product...">
+        </header>
+
+        <!-- Category Section -->
+        <section class="categories">
+            <div class="category-grid">
+                <ul>
+                    <li><a href="#laptops">Laptops</a> </li>
+                    <li><a href="#phone">Laptops</a> </li>
+                    <li><a href="#laptops">Laptops</a> </li>
+                    <li><a href="#laptops">Laptops</a> </li>
+                </ul>
+                <div class="category-card" style="background-image: url('home.png');">
+                    <h3>Laptops</h3>
+                </div>
+                <div class="category-card" style="background-image: url('phone.jpg');">
+                    <h3>phone</h3>
+                </div>
+                <div class="category-card" style="background-image: url('oraimoWatch.jpg');">
+                    <h3>watch </h3>
+                </div>
+                <div class="category-card" style="background-image: url('screen.jpg');">
+                    <h3>television</h3>
+                </div>
+                <div class="category-card" style="background-image: url('Gamers.png');">
+                    <h3>gamers</h3>
+                </div>
+                <div class="category-card" style="background-image: url('earpods.jpg');">
+                    <h3>Ear pods</h3>
+                </div>
+                <!-- Repeat for more categories -->
+            </div>
+        </section>
+
+
+        <!-- Product List Section -->
+        <section>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product.png" alt="Laptop Lenovo ThinkPad">
+                    <h3>Laptop</h3>
+                    <p>$209.00</p>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <!-- Repeat for more products -->
+            </div>
+        </section>
+
+        <!-- Product Details Section -->
+        <section class="product-detail">
+            <div class="image-slider">
+                <img src="laptop.jpg" width="50%" height="auto" alt="Laptop Lenovo ThinkPad">
+            </div>
+            <div class="product-info">
+                <h1>Laptop Lenovo ThinkPad</h1>
+                <p class="price">$209.00</p>
+                <button onclick="addToCart(1)">Buy Now</button>
+                <h2> <a href="#specifications">Specifications</a></h2>
+                <ul>
+                    <li>6.5" Display</li>
+                </ul>
+            </div>
+        </section>
+
+    </div> <!-- End of .product-page -->
+
+</body>
+</html>

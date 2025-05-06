@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .checkout-container {
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <p>Checkout Number: <strong id="checkout-number"></strong></p>
+        <form id="checkout-form">
+            <input type="text" id="fullname" placeholder="Full Name" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="card" placeholder="Card Number" required>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Generate a unique checkout number
+            const checkoutNumber = "CHK" + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("checkout-number").textContent = checkoutNumber;
+
+            document.getElementById("checkout-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const fullname = document.getElementById("fullname").value;
+                const phone = document.getElementById("phone").value;
+                const card = document.getElementById("card").value;
+
+                if (phone.length !== 10 || isNaN(phone)) {
+                    alert("Please enter a valid 10-digit phone number.");
+                    return;
+                }
+
+                if (card.length !== 16 || isNaN(card)) {
+                    alert("Please enter a valid 16-digit card number.");
+                    return;
+                }
+
+                alert("Order placed successfully! Your checkout number is " + checkoutNumber);
+            });
+        });
+    </script>
+</body>
+</html>

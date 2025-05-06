@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+         <div class="logo">
+            <h1>KPN TechStore </h1>
+         </div>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <nav class="navbar">
+            <div>
+                
+                <div>
+                    <ul>
+                        <li><a href="#home " class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="products.html">products</a></li>
+                        <li><a href="#contact us">Contact us</a></li>
+                        <li><a href="cart.html"><i class="fa-solid fa-cart-plus" style="color: #B197FC;"></i></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="search" placeholder="Search......">
+        </div>
+        
+    </header>
+    <section class="hero" id="home">
+        <div>
+            <h1>welcome to KPN TechStore shop,<br> Latest Gadgets</h1> <br>
+            <button class="btn">Shop Now</button>
+            <div class="home-image">
+             <img src="home.png" width="300px" height="300px">
+             <img src="home (2).png"  width="300px" height="300px"alt="">
+              </div>     
+            
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div>
+            <div>
+                <h1>About us</h1>
+                <p>At <strong>KPN TechStore</strong>, we are passionate about bringing you the latest and most innovative 
+                    gadgets to enhance your digital lifestyle. Whether you're looking for cutting-edge smartphones, 
+                    high-performance laptops, smart home devices, or gaming accessories, we've got you covered!<br>
+                    Our mission is to provide top-quality electronics at competitive prices while ensuring excellent 
+                customer service. We believe that technology should be accessible, reliable, and tailored to 
+                meet your needs.
+                </p>
+
+                
+            </div>
+
+            <div class="about-img">
+                <img src="about e image.jpg" width="50%" height="auto">
+            </div>
+            
+        </div>
+
+    </section>
+    
+    <section class="contact us" id="contact us">
+        <div class="form-group">
+            <h1> get in touch</h1>
+            <form action="" method="" >
+                <label for="name">Your name</label>
+                <input type="text" name="text" placeholder="" required>
+                <label for="phone number">phone number</label>
+                <input type="phone number" name="phone number" placeholder="" required>
+                <label for="message">message</label>
+                <textarea name="message" id="message" placeholder="" required></textarea>
+                <button type="submit" class="contact-btn">Submit</button>
+            </form>
+        
+        </div>
+    </section>
+    
+</body>
+</html>
